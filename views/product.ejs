@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<script
+	src="https://code.jquery.com/jquery-2.2.4.min.js"
+	integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+	crossorigin="anonymous"></script>
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<script type="text/javascript" src="/script.js"></script>
+
+	<style type="text/css">@media (min-width: 768px){
+	.navbar-right {
+		margin-right: 15px;
+	}
+	.featurette{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	}</style>
+
+	<title>Starter Template for Bootstrap</title>
+</head>
+<body data-gr-c-s-loaded="true">
+	<div class="navbar-wrapper">
+		<div class="container">
+
+			<nav class="navbar navbar-inverse navbar-static-top">
+				<div class="container">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="/">STORE</a>
+					</div>
+					<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li><a href="/">Home</a></li>
+						<li><a class="bag" href="/bag">Bag</a></li>
+					</ul>
+					<form class="navbar-form navbar-right">
+						<div class="form-group">
+							<input type="text" placeholder="Email" class="form-control">
+						</div>
+						<div class="form-group">
+							<input type="password" placeholder="Password" class="form-control">
+						</div>
+						<button type="submit" class="btn btn-success">Sign in</button>
+					</form>
+					</div>
+				</div>
+			</nav>
+
+		</div>
+	</div>
+
+
+	<!-- Marketing messaging and featurettes
+	================================================== -->
+	<!-- Wrap the rest of the page in another container to center all the content. -->
+
+	<div class="container marketing">
+	<!-- START THE FEATURETTES -->
+
+		<div class="row featurette">
+			<div class="col-md-5">
+				<img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500x500" src="<%= product[0].picture %>" data-holder-rendered="true">
+			</div>
+			<div class="col-md-7" data-id="<%= product[0]._id %>">
+				<h2 class="featurette-heading"><%= product[0].name %></h2>
+				<p class="lead"><%= product[0].about %></p>
+				<h2 class="featurette-heading"><span class="text-muted"><%= product[0].balance %></span></h2>
+				<button type="submit" data-id="<%= product[0]._id%>" class="btn btn-success addToCartBtn">Add to cart »</button>
+			</div>
+			
+		</div>
+		<hr class="featurette-divider">
+
+
+
+
+	<!-- /END THE FEATURETTES -->
+
+
+	<!-- FOOTER -->
+		<footer>
+			<p class="pull-right"><a href="#">Back to top</a></p>
+		</footer>
+
+	</div><!-- /.container -->
+
+
+
+	<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500" preserveAspectRatio="none" style="display: none; visibility: hidden; position: absolute; top: -100%; left: -100%;"><defs><style type="text/css"></style></defs><text x="0" y="25" style="font-weight:bold;font-size:25pt;font-family:Arial, Helvetica, Open Sans, sans-serif">500x500</text></svg>
+</body>
+</html>
